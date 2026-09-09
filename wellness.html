@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+    <h1>Fit<span>Track</span></h1>
+    <nav>
+      <a href="home.html">Dashboard</a>
+      <a href="task.html">Tasks</a>
+      <a href="Habit.html">Habits</a>
+      <a href="wellness.html" class="active">Wellness</a>
+    </nav>
+    <p class="small">Small steps every day.</p>
+  </aside>
+
+  <main>
+    <header id="dashboard">
+      <div><p class="eyebrow" id="today"></p><h2>Good day, keep moving!</h2></div>
+      <button id="resetBtn" class="outline">Reset today</button>
+    </header>
+
+    <section class="panel" id="summary">
+      <p class="eyebrow">This week</p><h3>Weekly summary</h3>
+      <div class="summary-grid">
+        <div>
+          <strong id="summaryTasks">0</strong><span>tasks completed</span>
+        </div>
+      <div>
+        <strong id="summaryHabits">0</strong><span>habits completed</span>
+      </div>
+      <div>
+        <strong id="summaryWater">0 ml</strong><span>water consumed</span>
+      </div>
+      <div>
+        <strong id="summarySleep">0 h</strong><span>average sleep</span>
+      </div>
+    </div>
+    </section><br>
+
+    <section class="grid2" id="wellness">
+      <article class="panel2">
+        <p class="eyebrow">Rest well</p>
+        <h3>Sleep tracker</h3>
+        <p class="eyebrow">Enter the total hours of sleep taken</p>
+        <br>
+        <div class="inline">
+            <input id="sleepInput" type="number" min="0" max="24" step="0.5" placeholder="Hours slept"><button id="sleepBtn">Save</button>
+        </div>
+        <strong id="sleepToday">No sleep logged</strong>
+        <div id="sleepGraph" class="sleep-graph">
+        </div>
+    </article>
+    </section>
+</main>
+<script src="Wellness.js"></script>
+<script src = "summary.js"></script>
+</body>
+</html>

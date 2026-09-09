@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTrack Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside>
+    <h1>Fit<span>Track</span></h1>
+    <nav>
+      <a href="home.html">Dashboard</a>
+      <a href="task.html" class="active">Tasks</a>
+      <a href="Habit.html">Habits</a>
+      <a href="wellness.html">Wellness</a>
+    </nav>
+    <p class="small">Small steps every day.</p>
+  </aside>
+
+  <main>
+    <header id="dashboard">
+      <div><p class="eyebrow" id="today"></p><h2>Good day, keep moving!</h2></div>
+      <button id="resetBtn" class="outline">Reset today</button>
+    </header>
+
+    <section class="panel" id="summary">
+      <p class="eyebrow">This week</p><h3>Weekly summary</h3>
+      <div class="summary-grid">
+        <div>
+          <strong id="summaryTasks">0</strong><span>tasks completed</span>
+        </div>
+      <div>
+        <strong id="summaryHabits">0</strong><span>habits completed</span>
+      </div>
+      <div>
+        <strong id="summaryWater">0 ml</strong><span>water consumed</span>
+      </div>
+      <div>
+        <strong id="summarySleep">0 h</strong><span>average sleep</span>
+      </div>
+    </div>
+    </section><br>
+
+    <section class="grid2">
+      <article class="panel" id="tasks">
+        <div class="section-title">
+            <div>
+                <p class="eyebrow">Productivity</p><h3>Daily tasks</h3>
+            </div>
+            <button id="addTaskBtn">+ Add task</button>
+        </div>
+        <form id="taskForm" class="add-form hidden">
+          <input id="taskName" required placeholder="What needs to be done?">
+          <button>Add</button></form>
+        <div class="task-columns">
+            <div>
+                <h4>Pending</h4>
+                <ul id="pendingTasks" class="task-list" data-status="pending"></ul>
+            </div>
+            <div>
+                <h4>Completed</h4>
+                <ul id="completedTasks" class="task-list" data-status="completed"></ul>
+            </div>
+        </div>
+      </article>
+    </section>
+    </main>
+    <script src="Task.js"></script>
+    <script src = "summary.js"></script>
+</body>
+</html>
